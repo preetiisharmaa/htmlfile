@@ -4,307 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        header{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 60px;
-            width: 100%;
-            background: black;
-        }
+     <style>
 
-        .heading ul{
-            display: flex;
-            position: absolute;
-            left: 350px;
-            top: 15px;
-        }
+.navbar{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    font-size: larger;
+    /* display: inline-block; */
+}
 
-        .menu{
-            position: absolute;
-            top: 50px;
-            left: 10px;
-        }
+.nv1{
+    position: absolute;
+    top: 10px;
+    left: 840px;
+    font-size: larger;
+    display: inline-block;
+}
 
-        .logo a{
-            color: red;
-            transition-duration: 1s;
-            font-weight: 800;
-        }
+/* Slideshow container */
+.slideshow-container {
+max-width: 100%;
+position: relative;
+margin: auto;
+transition-duration: 1s;
+}
 
-        .logo a:hover{
-            color: rgb(240, 197,6);
-            transition-duration: 1s;
-        }
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 300px;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
 
-        .nav-bar ul li a{
-            text-decoration: none;
-            color: black;
-            position: relative;
-            top: -2px;
-            left: -50px;
-            color: mediumpurple;
-            margin: 2px 14px;
-            font-size: 20px;
-            transition-duration: 0.2s;
-            }
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
 
-        .nav-bar ul li a:hover{
-            width: 100%;
-            transition-duration: 1s;
-            background-color: rgb(243,168,7);
-            background: white;
-            }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
 
-        .nav-bar ul li a:active{
-            color: red;
-        }
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
 
-        .heading ul li{
-        list-style: none;
-        }
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
 
-        .heading ul li a{
-            text-decoration: none;
-            color: black;
-            position: relative;
-            top: -2px;
-            left: -50px;
-            color: red;
-            margin: 2px 14px;
-            font-size: 20px;
-            transition-duration: 0.2s;
-            }
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
 
-            .heading ul li a:active{
-                color: red;
-            }
+.active, .dot:hover {
+background-color: #717171;
+}
 
-            .heading ul li a:hover::before{
-                width: 100%;
-                transition-duration: 1s;
-                background-color: rgb(243,168,7);
-                background: white;
-            }
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
 
-            .menu{
-                display: none;
-            }
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
 
-            #input{
-                height: 30px;
-                width: 250px;
-                text-decoration: none;
-                border: 0px;
-                padding: 5px;
-                position: absolute;
-                top: 20px;
-                left: 965px;
-            }
-
-            .logo a{
-                color: red;
-                font-size: 35px;
-                font-weight: 500;
-                text-decoration: none;
-            }
-
-            /* ion-icon{
-                width: 30px;
-                height: 30px;
-                background-color: red;
-                color: black;
-            }
-
-            ion-icon:hover{
-                cursor: pointer;
-            } */
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
 
 
-            .img-slider img{
-                height: 720px;
-                width: 1080px;
-            }
+.div2{
+height: 500px;
+width: 100%;
+background-color: aquamarine;
+position: absolute;
+top: 640px;
+}
 
-            .section2 .container .items .price{
-                float: left;
-                padding-left: 10px;
-                display: block;
-                width: 100%;
-                color: red;
-                font-weight: 650;
-            }
+img{
+opacity: 0.8;
+}
 
-            .section2 .container .items .info{
-                padding-left: 10px;
-                color: rgb(243,168,7);
-            }
+.h1{
+font-size: 40px;
+position: absolute;
+top: 120px;
+left: 40px;
+color: white;
+}
 
-            .section2 .container .items .img img{
-                width: 200px;
-                height: 200px;
-                margin: 0;
-                padding: 0;
-                border-radius: 12px;
-                transition-duration: 0.8s;
-            }
+.h12{
+font-size: 40px;
+position: absolute;
+top: 90px;
+left: 40px;
+color: white;
+}
 
-            .section2 .container .items .img{
-                overflow: hidden;
-                margin: 0;
-            }
+.h13{
+font-size: 40px;
+position: absolute;
+top: 90px;
+left: 40px;
+color: white;
+}
 
-            .section2 .container .items:hover .img img{
-                transform: scale(1.2);
-                transition-duration: 0.8s;
-                border-radius: 12px;
-            }
+.h2{
+font-size: 17px;
+position: absolute;
+top: 200px;
+left: 40px;
+color: white;
+}
 
-            footer{
-                display: flex;
-                flex-direction: column;
-                background-color: burlywood;
-                align-items: center;
-                color: red;
-                height: 1020px;
-                width: 100%;
-            }
+.h21{
+font-size: 17px;
+position: absolute;
+top: 200px;
+left: 40px;
+color: white;
+}
 
-            .footer1{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: red;
-                margin-top: 15px;
-            }
+.h22{
+font-size: 17px;
+position: absolute;
+top: 200px;
+left: 45px;
+color: white;
+}
 
-            .social-media a ion-icon{
-                color: red;
-                background-color: black;
-            }
-
-            .social-media a:hover ion-icon{
-                color: red;
-                transform: translateY(5px);
-            }
-
-            .footer2{  
-                display: flex;
-                width: 100%;
-                justify-content: space-evenly;
-                align-items: center;
-                text-decoration: none;
-                flex-wrap: wrap;
-            }
-
-            .footer0{
-                font-weight: 1200;
-                transition-duration: 1s;
-            }
-
-            .cn{
-                font-size: 120px;
-                position: absolute;
-                top: 15px;
-                left: 20px;
-                text-shadow: 3px 3px 5px white;
-            }
-
-            .footer0:hover{
-                color: rgb(243,168,7);
-            }
-
-            .footer2 .heading{
-                font-weight: 900;
-                font-size: 18px;
-            }
-
-            .footer3{
-                margin-top: 60px;
-                margin-bottom: 20px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-    </style>
+</style>
 </head>
 <body>
-    <header>
-        <div class="logo"><a href="#" class="cn">BOD SQUAD NUTRITION</a></div>
-        <div class="menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-            <!-- <a href="#">
-            <ion-icon name="close" class="close"></ion-icon>
-            </a> -->
+<?php
 
-            <nav class="nav-bar">
-            <ul>
-                <li><a href="#" class="under">HOME</a></li>
-                <li><a href="#" class="under">SHOP</a></li>
-                <li><a href="#" class="under">OUR PRODUCTS</a></li>
-                <li><a href="#" class="under">CONTACT US</a></li>
-                <li><a href="#" class="under">ABOUT US</a></li>
-            </ul>
-        </nav>
+include "header.html";
 
-            <div class="search">
-            <a href=""><input type="text" placeholder="search products" id="input">
-            <ion-icon class="s" name="search"></ion-icon>
-            </a>
-            </div>
-            <div class="heading">
-                <ul>
-                <li><a href="#" class="upper">HOME</a></li>
-                <li><a href="#" class="upper">SHOP</a></li>
-                <li><a href="#" class="upper">OUR PRODUCTS</a></li>
-                <li><a href="#" class="upper">CONTACT US</a></li>
-                <li><a href="#" class="upper">ABOUT US</a></li>
-                </ul>
-            </div>
-    </header>
 
-    <footer>
-    <div class="footer0">
-        <h1>BOD SQUAD NUTRITION</h1>
-    </div>
-    <div class="footer1">
-        Connect with us at<div class="social-media">
-            <a href="#">
-            <ion-icon name="logo-facebook"></ion-icon>
-            </a>
+?>
 
-            <a href="#">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
+<div class="slideshow-container">
 
-            <a href="#">
-            <ion-icon name="logo-youtube"></ion-icon>
-            </a>
+  <div class="navbar">
+    <li class="nv1"><a href="#">HOME</a></li>
+    <li class="nv1"><a href="#">PRODUCTS</a></li>
+    <li class="nv1"><a href="#">CONTACT US</a></li>
+    <li class="nv1"><a href="#">ABOUT</a></li>
+    
 
-            <a href="#">
-            <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltc3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" style="width:100%" height="600px">
+    <b><b class="h1">SHAPE YOUR
+    <br>PERFECT BODY</b></h1>
+    <h2 class="h2">A small river named Duden flows by their place and supplies
+    <br>it with the necessary regelialia.</h2>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://assets.sweat.com/shopify_articles/images/010/005/285/original/BackToGymSWEATf1f07a7f6f79e7b8807d2436a6ae8e8b.jpg?1625801362" style="width:100%" height="600px">
+    <b><h1 class="h12">INCREASE YOUR 
+    <br>MUSCLE POWER</b></h1>
+    <h2 class="h21">A small river named Duden flows by their place and supplies
+    <br>it with the necessary regelialia.</h2>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://media.istockphoto.com/id/1322158059/photo/dumbbell-water-bottle-towel-on-the-bench-in-the-gym.jpg?s=612x612&w=0&k=20&c=CIdh6LPGwU6U6lbvKCdd7LcppidaYwcDawXJI-b0yGE=" style="width:100%" height="600px">
+    <b><h1 class="h13">YOU ONLY FAIL,
+    <br>WHEN YOU STOP TRYING</b></h1>
+    <h2 class="h22">A small river named Duden flows by their place and supplies
+    <br>it with the necessary regelialia.</h2>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)" style="position: absolute; top: 605px; left: 600px;"></span> 
+    <span class="dot" onclick="currentSlide(2)" style="position: absolute; top: 605px; left: 620px;"></span> 
+    <span class="dot" onclick="currentSlide(3)" style="position: absolute; top: 605px; left: 640px;"></span> 
+  </div>
+  </div>
+  
 
-            <a href="#">
-            <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-        </div>
-    </div>
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
-    <div class="footer2">
-        <div class="product">
-            <div class="heading">Products</div>
-            <div class="div">Sell your products</div>
-            <div class="div">Advertise</div>
-            <div class="div">Pricing</div>
-            <div class="div">Products buisness</div>
-        </div>
-    </div>
-    </footer>
+<div class="div2">
+
+
+</div>
 </body>
 </html>
